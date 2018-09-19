@@ -1,30 +1,16 @@
+// SPECIFIY our new variable for making requests
+var ourRequest = new XMLHttpRequest();
 
-// cat object definition
+// can specify arguments for the open, in our case we want to GET data, not POST data
+ourRequest.open('GET', "https://learnwebcode.github.io/json-example/animals-1.json") 
+// SECOND argument is the URL that we want to get from i.e. our data
 
-var myCat = {
-    "name": "catting", 
-    "species:": "cat",
-    "favFood": "catfood"
+// now do something with our data
+
+ourRequest.onload = function (){
+    // this is the function we want to perform when we load our stuff
+    console.log(ourRequest.responseText);
 }
 
-myCat.favFood // gives you the value "catfood"
+ourRequest.send();
 
-
-// now exploring arrays
-var myFavColors = ["blue", "black", "white"];
-
-myFavColors[1]; // access "black"
-
-// now array of objects THIS IS A JSON
-var thePets = [
-    {
-        "name": "catting", 
-        "species:": "cat",              // JSON is javascript object notation  
-        "favFood": "catfood"            // so we have arrays nested in objects & vice versa
-    },
-    {
-        "name": "dogting", 
-        "species:": "dog",
-        "favFood": "chocochipcookies"
-    }
-]
