@@ -13,6 +13,3 @@ ourRequest.onload = function (){
 }
 
 ourRequest.send(); // this should send our AJAX request, specified by the request variable at the top
-
-
-
